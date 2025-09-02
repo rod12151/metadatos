@@ -1,0 +1,17 @@
+    version: '3.8'
+    services:
+      db:
+        image: postgres:16-alpine # Or your desired PostgreSQL version
+        container_name: my-postgres-db
+        environment:
+          POSTGRES_DB: your_database_name
+          POSTGRES_USER: user
+          POSTGRES_PASSWORD: user123
+        ports:
+          - "5432:5432" # Maps host port 5432 to container port 5432
+        volumes:
+          - db_data:/var/lib/postgresql/data # Persists data in a Docker volume
+        restart: unless-stopped # Restarts the container unless manually stopped
+    
+    volumes:
+      db_data: # Defines the Docker volume for data persistence
