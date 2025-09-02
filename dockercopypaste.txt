@@ -1,0 +1,4 @@
+1. crear una carpeta en el contenedor 
+ docker exec -it contenedor-id-o-nombre  mkdir /var/opt/mssql/backup
+2 copiar el backup
+docker cp C:\Users\USUARIO\Desktop\AdventureWorks2022.bak 9d2aab53c50e:/var/opt/mssql/backup
