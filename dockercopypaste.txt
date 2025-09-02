@@ -2,3 +2,11 @@
  docker exec -it contenedor-id-o-nombre  mkdir /var/opt/mssql/backup
 2 copiar el backup
 docker cp C:\Users\USUARIO\Desktop\AdventureWorks2022.bak 9d2aab53c50e:/var/opt/mssql/backup
+
+
+----------------------------------------------------------------
+subir archivo a servidor
+1. copiar de pc al servidor
+scp C:\Users\USUARIO\Desktop\AdventureWorks2022.bak user@192.168.1.252:/home/user/
+2. copiar al contenedor
+docker cp /home/user/AdventureWorks2022.bak 1845f13fc7c8:/var/opt/mssql/backups/
